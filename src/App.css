@@ -1,9 +1,26 @@
 .app-wrapper{
   display: grid;
   grid-template-areas: "nav cont";
-  grid-template-columns: 17% 83%;
+  grid-template-columns: 20% 80%;
+  height: 100vh;
 }
 .app-content{
   grid-area: cont;
   background-color: #EBEBEB;
+}
+
+@media (max-width: 1024px){
+
+  .app-wrapper{
+    grid-template-columns: 30% 70%;
+  }
+}
+
+@media (max-width: 720px){
+
+  .app-wrapper{
+    grid-template-areas: "nav nav"" cont cont";
+    grid-template-columns: 20% 80%;
+
+  }
 }

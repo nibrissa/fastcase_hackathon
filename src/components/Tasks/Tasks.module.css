@@ -1,0 +1,48 @@
+.tasks{
+    display: grid;
+    grid-template-areas:
+    "open close done";
+}
+
+.board{
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 0.8em;
+}
+
+.boardTitle{
+    text-align: center;
+}
+
+.item{
+    background-color: #EBEBEB;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.8em;
+}
+
+.btnWrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+button{
+
+    background-color: #8D23F6;
+    border: #8D23F6;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+    margin: 1rem;
+
+}
+
+@media (max-width: 1024px){
+
+    .tasks{
+        display: flex;
+        flex-direction: column;
+    }
+}
