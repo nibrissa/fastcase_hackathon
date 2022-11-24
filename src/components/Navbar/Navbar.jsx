@@ -42,15 +42,6 @@ const Navbar = () => {
                         <a>Список друзей</a>
                     </div>
 
-                    <div onClick={() => setNav(!nav)} className={s.item}>
-                        <img src={require('../../img/settings.png')}/>
-                        <a>Настройки</a>
-                    </div>
-
-                    <div onClick={() => setNav(!nav)} className={s.item}>
-                        <img src={require('../../img/help.png')}/>
-                        <a>По мощь</a>
-                    </div>
                 </nav>
 
                 <div onClick={() => setNav(!nav)} className={s.mobileBtn}>

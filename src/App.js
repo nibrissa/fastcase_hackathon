@@ -3,14 +3,16 @@ import React from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import Tasks from "./components/Tasks/Tasks";
 import Statistics from "./components/Statistics/Statistics";
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Login from "./components/login/login";
+import AuthService from "./services/auth.service";
 
 function App(props) {
+    const user = AuthService.getCurrentUser();
+    if (user) {
 
-    return (
+        return (
 
-        <BrowserRouter>
 
             <div className={"app-wrapper"}>
                 <Navbar/>
@@ -19,8 +21,7 @@ function App(props) {
                     <Routes>
 
                         <Route path='/tasks'
-                               element={<Tasks
-                                   tasksPage={props.state.tasksPage}/>}/>
+                               element={<Tasks tasksPage={props.state.tasksPage}/>}/>
 
                         <Route path='/statistics' element={<Statistics/>}/>
 
@@ -32,10 +33,23 @@ function App(props) {
 
             </div>
 
-        </BrowserRouter>
+
+        );
+    } else {
+        return (
 
 
-    );
+            <div className={"app-wrapper"}>
+
+                <div className={'app-content'}>
+                    <Login/>
+                </div>
+
+            </div>
+
+
+        );
+    }
 
 }
 
