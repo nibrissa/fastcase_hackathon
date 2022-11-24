@@ -19,7 +19,7 @@
 @media (max-width: 720px){
 
   .app-wrapper{
-    grid-template-areas: "nav nav"" cont cont";
+    grid-template-areas: "nav nav" "cont cont";
     grid-template-columns: 20% 80%;
 
   }
