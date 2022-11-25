@@ -17,7 +17,7 @@ import CreateTask from "./components/CreateTask/CreateTask";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (user) {
+    if (!user) {
 
         return (
 

@@ -21,15 +21,28 @@ const TriggerModal = ({open, setOpenM}) => {
                             <div className={s.contentModal}>
 
                             <Tabs>
-                                <TabList>
+                                <TabList className={s.tabList}>
                                     <Tab>По времени</Tab>
                                     <Tab>По другой задаче</Tab>
                                 </TabList>
                                 <TabPanel>
-                                    <p>здесь по времени</p>
+                                    <select>
+                                        <option disabled selected> Выберите частоту уведомлений:</option>
+                                        <option>Раз в час</option>
+                                        <option>Раз в сутки</option>
+                                        <option>Раз в неделю</option>
+                                    </select>
+
                                 </TabPanel>
                                 <TabPanel>
-                                    <p>здесь по задаче</p>
+                                    <span>Задача</span>
+                                    <input type='text'/>
+                                    <select>
+                                        <option disabled selected> Действие</option>
+                                        <option>Открыта</option>
+                                        <option>Закрыта</option>
+                                        <option>Завершенна</option>
+                                    </select>
                                 </TabPanel>
 
 

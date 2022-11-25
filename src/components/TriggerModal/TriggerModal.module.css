@@ -44,29 +44,7 @@
     flex-direction: column;
 }
 
-.modalInput{
-    margin: 0.5rem 0;
-    border-radius: 0.3rem;
-    padding: 0.8rem;
-    background-color: #EBEBEB;
-    border: none;
-    color: black;
-}
-
-.modalSelect{
-    margin: 0.5rem 0;
-    border-radius: 0.3rem;
-    padding: 0.8rem;
-    background-color: #EBEBEB;
-    border: none;
-}
-.modalData{
-    margin: 0.5rem 0;
+.tabList{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-}
-
-.modalFile{
-    margin: 0.5rem 0;
 }
