@@ -1,0 +1,19 @@
+.itemWrapper{
+    margin: 1rem;
+    background-color: #EBEBEB;
+    border-radius: 0.8em;
+    padding: 0.8em;
+    text-align: center;
+}
+
+.ava{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    background-color: #8D23F6;
+    display: inline-block;
+}
+
+.info{
+
+}

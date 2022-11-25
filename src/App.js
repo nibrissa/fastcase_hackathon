@@ -8,6 +8,7 @@ import Login from "./components/login/login";
 import AuthService from "./services/auth.service";
 import SingleTask from "./components/SingleTask/SingleTask";
 import SingleUser from "./components/SingleUser/SingleUser";
+import Friendlist from "./components/Friendlist/Friendlist";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
@@ -29,7 +30,7 @@ function App(props) {
                         <Route path='/statistics' element={<Statistics/>}/>
                         <Route path='/my_profile' element={<SingleUser/>}/>
                         {/*<Route path='/:username/profile' element={<Profile/>}/>*/}
-                        {/*<Route path='/friendlist' element={<Friendlist/>}/>*/}
+                        <Route path='/friendlist' element={<Friendlist/>}/>
 
                     </Routes>
 

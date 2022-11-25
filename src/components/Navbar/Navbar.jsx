@@ -17,6 +17,12 @@ const Navbar = () => {
                 </div>
 
                 <nav className={nav ? [s.nav, s.active].join(' ') : [s.nav]}>
+                    <NavLink to="/my_profile">
+                        <div onClick={() => setNav(!nav)} className={s.item}>
+                            <img src={require('../../img/social.png')} alt='friendlist'/>
+                            Профиль
+                        </div>
+                    </NavLink>
 
                     <NavLink to="/tasks">
                         <div onClick={() => setNav(!nav)} className={s.item}>
@@ -45,6 +51,8 @@ const Navbar = () => {
                             Список друзей
                         </div>
                     </NavLink>
+
+
                 </nav>
 
                 <div onClick={() => setNav(!nav)} className={s.mobileBtn}>
