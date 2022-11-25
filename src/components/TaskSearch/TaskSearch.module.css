@@ -28,6 +28,8 @@
     flex-direction: row;
     justify-content: space-between;
     cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .accordionContent{
@@ -36,6 +38,14 @@
     flex-direction: column;
 }
 
+.acInput{
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    background-color: white;
+    border: none;
+    color: black;
+}
 .acItem{
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
 }

@@ -17,14 +17,14 @@ const TaskSearch = () => {
                             <div>{isActive ? '-' : '+'}</div>
                         </div>
                         {isActive && <div className={s.accordionContent}>
-                            <select className={s.acItem}>
+                            <select className={s.acInput}>
                                 <option disabled selected>Статус задачи:</option>
                                 <option>Открыта</option>
                                 <option>Закрыта</option>
                                 <option>Завершена</option>
                             </select>
-                            <input type='date' className={s.acItem}/>
-                            <input type='text' className={s.acItem} placeholder='Название отдела'/>
+                            <input type='date' className={s.acInput}/>
+                            <input type='text' className={s.acInput} placeholder='Название отдела'/>
                             <div className={s.acItem}>
                                 <label htmlFor="openMe">Открытые мной</label>
                                 <input id="openMe" type="checkbox"/>
