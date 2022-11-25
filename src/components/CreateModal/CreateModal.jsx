@@ -17,45 +17,42 @@ const CreateModal = ({open, setOpen}) => {
                                 <AiOutlineClose onClick={() => setOpen(false)} size={25} color={'#8D23F6'} className={s.closeBtn}/>
                             </div>
                             <div className={s.contentModal}>
-                                <ul>
-                                    <li>
-                                        <input type="text" placeholder='Заголовок' className={s.modalItem} />
-                                    </li>
-                                    <li >
-                                        <select className={s.modalItem}>
+
+                                        <input type="text" placeholder='Заголовок' className={s.modalInput} />
+
+                                        <select className={s.modalSelect}>
                                             <option disabled selected>Тип напоминания:</option>
                                             <option>Почта</option>
                                             <option>Телефон</option>
                                             <option>СМС</option>
                                         </select>
-                                    </li>
-                                    <li >
-                                        <select className={s.modalItem}>
+
+                                        <select className={s.modalSelect}>
                                             <option disabled selected>Способ оповещания:</option>
                                             <option>Почта</option>
                                             <option>Телефон</option>
                                             <option>СМС</option>
                                         </select>
-                                    </li>
-                                    <li >
-                                        <input type="number" placeholder='Очки за выполнение' className={s.modalItem}/>
-                                    </li>
-                                    <li >
-                                        <div>
-                                            <span>Начало:</span>
-                                            <input type="date" className={s.inputModal}/>
-                                            <span>Конец:</span>
-                                            <input type="date" className={s.inputModal}/>
-                                        </div>
-                                    </li>
-                                    <li >
-                                        <input type="file"/>
-                                    </li>
-                                    <li>
-                                        <textarea className={s.modalItem} placeholder='Добавьте описание задачи'/>
-                                    </li>
 
-                                </ul>
+                                        <input type="number" placeholder='Очки за выполнение' className={s.modalInput}/>
+
+                                        <div className={s.modalData}>
+                                            <div>
+                                                <span>Начало:</span>
+                                                <input type="date" className={s.inputModal}/>
+                                            </div>
+                                            <div>
+                                                <span>Конец:</span>
+                                                <input type="date" className={s.inputModal}/>
+                                            </div>
+
+                                        </div>
+
+                                        <input className={s.modalFile} type="file"/>
+
+                                        <textarea className={s.modalInput} placeholder='Добавьте описание задачи'/>
+
+
                             </div>
                             <button className={s.btn}>Создать</button>
                         </div>
