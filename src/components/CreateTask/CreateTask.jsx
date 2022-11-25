@@ -4,9 +4,12 @@ import axios from "axios";
 import {API_URL} from "../../services/user.service";
 import authHeader from "../../services/auth-header";
 import AuthService from "../../services/auth.service";
+import ViewModal from "../ViewModal/ViewModal";
+import TriggerModal from "../TriggerModal/TriggerModal";
 
 
 const CreateTask = () => {
+    const [open, setOpenM] = React.useState(false);
 
     let task = {
         name: "",
@@ -28,6 +31,8 @@ const CreateTask = () => {
             }
         ]
     };
+
+
 
     function create_task() {
         console.log(task)
@@ -59,7 +64,8 @@ const CreateTask = () => {
                 </div>
 
                 <div className={s.triggerBtn}>
-                    <button className={s.btnStyle}>Открыть модалку с триггерами</button>
+                    <button className={s.btnStyle} onClick={() => setOpenM(true)}>Открыть модалку с триггерами</button>
+                    {open && <TriggerModal open={open} setOpenM={setOpenM}/>}
                 </div>
 
                 <div className={s.btnSection}>
