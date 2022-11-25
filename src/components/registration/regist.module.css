@@ -1,0 +1,94 @@
+.loginCardContainer{
+    min-height: 100vh;
+    background: linear-gradient(to right, #4f4fc4, #d441b3);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.loginCard{
+    background: rgba(255, 255, 255, .5);
+    padding: 3.5rem;
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.loginCardForm{
+    width: 100%;
+}
+
+
+.loginCardHeader{
+    margin-bottom: 2rem
+}
+
+
+.loginCardHeader h1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+}
+
+.loginCardContainer h1+div{
+    font-size: calc(1rem * .8);
+    opacity: .8;
+}
+
+
+
+.loginCardForm{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.loginCard input{
+
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, .3);
+    padding: 1rem 0.5rem;
+    border-radius: 100px;
+    transition: background .5s;
+
+}
+
+.loginCard input:focus{
+    background: white;
+}
+
+.btn{
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .5s;
+}
+
+
+.btn:hover{
+    background-color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .loginCardContainer{
+        padding: 2rem 0;
+    }
+
+    .loginCard{
+        padding: 2rem;
+    }
+
+
+
+}
+

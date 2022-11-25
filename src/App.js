@@ -9,6 +9,7 @@ import AuthService from "./services/auth.service";
 import SingleTask from "./components/SingleTask/SingleTask";
 import SingleUser from "./components/SingleUser/SingleUser";
 import Friendlist from "./components/Friendlist/Friendlist";
+import Regist from "./components/registration/regist";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
@@ -23,6 +24,7 @@ function App(props) {
 
                     <Routes>
                         <Route path='/login' element={<Login/>}/>
+                        <Route path='/registration' element={<Regist/>}/>
                         <Route path='/tasks'
                                element={<Tasks tasksPage={props.state.tasksPage}/>}/>
                         <Route path='/task/:id' element={<SingleTask/>}/>
