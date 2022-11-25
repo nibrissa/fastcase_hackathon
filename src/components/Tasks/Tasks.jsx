@@ -4,6 +4,8 @@ import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {API_URL} from "../../services/user.service";
 import authHeader from "../../services/auth-header";
+import {AiOutlineClose} from "react-icons/ai";
+import {MdDone, MdModeEditOutline} from "react-icons/all";
 
 
 function load_tasks() {
@@ -39,6 +41,10 @@ const Tasks = (props) => {
                             <div className={s.itemDesc}>{item.id}</div>
                             <div className={s.itemDesc}>{item.name}</div>
                             <div className={s.itemBtn}>
+                                <button className={s.iconsBtn}><AiOutlineClose size={25} color={'#8D23F6'}/></button>
+                                <button className={s.iconsBtn}><MdDone size={25} color={'#8D23F6'}/></button>
+                                <button className={s.iconsBtn}><MdModeEditOutline size={25} color={'#8D23F6'}/></button>
+
                                 {/*<ul>
                                     <li>
                                         <NavLink to={"/task/" + item.id}>

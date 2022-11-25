@@ -20,13 +20,19 @@
     padding: 1rem;
     margin: 1rem;
     border-radius: 0.8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .btnWrapper{
     display: flex;
     justify-content: flex-end;
 }
-
+.iconsBtn{
+    border: none;
+}
 .button{
 
     background-color: #8D23F6;
@@ -43,6 +49,13 @@
 
     .tasks{
         display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 720px){
+
+    .item{
         flex-direction: column;
     }
 }
