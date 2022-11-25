@@ -7,10 +7,11 @@ import {Route, Routes} from 'react-router-dom';
 import Login from "./components/login/login";
 import AuthService from "./services/auth.service";
 import SingleTask from "./components/SingleTask/SingleTask";
+import SingleUser from "./components/SingleUser/SingleUser";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (user) {
+    if (!user) {
 
         return (
 
@@ -26,7 +27,7 @@ function App(props) {
                         <Route path='/task/:id' element={<SingleTask/>}/>
                         {/*<Route path='/tasks/search' element={<TaskSearch/>}/>*/}
                         <Route path='/statistics' element={<Statistics/>}/>
-                        {/*<Route path='/my_profile' element={<MyProfile/>}/>*/}
+                        <Route path='/my_profile' element={<SingleUser/>}/>
                         {/*<Route path='/:username/profile' element={<Profile/>}/>*/}
                         {/*<Route path='/friendlist' element={<Friendlist/>}/>*/}
 

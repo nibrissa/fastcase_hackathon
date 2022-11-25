@@ -1,0 +1,49 @@
+.profileWrapper{
+    margin: 2rem;
+}
+
+.profileContent{
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "ava info";
+    grid-template-columns: 50% 50%;
+    width: auto;
+}
+.profileAva{
+    border-radius: 50%;
+    background-color: #8D23F6;
+    width: 10em;
+    height: 10em;
+    grid-area: ava;
+}
+
+.profileInfo{
+    grid-area: info;
+}
+
+.profileInfoItem{
+    background-color: #EBEBEB;
+    border-radius: 0.8em;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+select{
+    width: 100%;
+    border: none;
+    padding: 0.2rem;
+    background-color: #EBEBEB;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+
+    .profileContent{
+        grid-template-areas: "ava ava" "info info";
+    }
+
+
+
+}
