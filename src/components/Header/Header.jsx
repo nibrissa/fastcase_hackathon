@@ -3,11 +3,10 @@ import s from './Header.module.css'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {CgProfile} from "react-icons/all";
 import CreateModal from "../CreateModal/CreateModal";
+import {NavLink} from "react-router-dom";
 
 
 const Header = () => {
-
-    const [open, setOpen] = React.useState(false);
 
     return(
 
@@ -19,17 +18,21 @@ const Header = () => {
                             <button className={s.btn}> <IoMdNotificationsOutline size={42} color={'#8D23F6'}/> </button>
                         </div>
                     </li>
+                    <NavLink to={'/my_profile'}>
+                        <li className={s.headerItem}>
+                            <div className={s.btnCon}>
+                                <button className={s.btn}> <CgProfile size={42} color={'#8D23F6'}/> </button>
+                            </div>
+                        </li>
+                    </NavLink>
+                    <NavLink to={'/update'}>
                     <li className={s.headerItem}>
                         <div className={s.btnCon}>
-                            <button className={s.btn}> <CgProfile size={42} color={'#8D23F6'}/> </button>
+                            <button  className={s.btnCreate}> Создать задачу </button>
+
                         </div>
                     </li>
-                    <li className={s.headerItem}>
-                        <div className={s.btnCon}>
-                            <button onClick={() => setOpen(true)} className={s.btnCreate}> Создать задачу </button>
-                            {open && <CreateModal open={open} setOpen={setOpen}/>}
-                        </div>
-                    </li>
+                    </NavLink>
                 </ul>
 
             </div>

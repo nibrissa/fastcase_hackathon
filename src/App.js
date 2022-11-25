@@ -10,14 +10,14 @@ import SingleUser from "./components/SingleUser/SingleUser";
 import Friendlist from "./components/Friendlist/Friendlist";
 import Registration from "./components/registration/registration";
 import Header from "./components/Header/Header";
-import CreateModal from "./components/CreateModal/CreateModal";
 import TaskSearch from "./components/TaskSearch/TaskSearch";
 import Logout from "./components/logout/Logout";
+import CreateTask from "./components/CreateTask/CreateTask";
 
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (user) {
+    if (!user) {
 
         return (
 
@@ -30,6 +30,7 @@ function App(props) {
                     <Routes>
                         <Route path='/' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
                         <Route path='/login' element={<Login/>}/>
+                        <Route path='/update' element={<CreateTask/>}/>
                         <Route path='/registration' element={<Registration/>}/>
                         <Route path='/logout' element={<Logout/>}/>
                         <Route path='/tasks' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
