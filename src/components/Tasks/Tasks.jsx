@@ -6,6 +6,7 @@ import {API_URL} from "../../services/user.service";
 import authHeader from "../../services/auth-header";
 import {AiOutlineClose} from "react-icons/ai";
 import {MdDone, MdModeEditOutline} from "react-icons/all";
+import ViewModal from "../ViewModal/ViewModal";
 
 
 function load_tasks() {
@@ -18,6 +19,7 @@ const Tasks = (props) => {
     if (!tasks) {
         tasks = props.tasksPage[0].items
     }
+    const [open, setOpenM] = React.useState(false);
 
     return (
 
@@ -37,7 +39,7 @@ const Tasks = (props) => {
 
                     {/*{board.items.map(item =>*/}
                     {tasks.map(item =>
-                        <div className={s.item}>
+                        <div className={s.item} onClick={() => setOpenM(true)}>
                             <div className={s.itemDesc}>{item.id}</div>
                             <div className={s.itemDesc}>{item.name}</div>
                             <div className={s.itemBtn}>
@@ -53,7 +55,7 @@ const Tasks = (props) => {
                                     </li>
                                 </ul>*/}
                             </div>
-
+                            {open && <ViewModal open={open} setOpenM={setOpenM}/>}
                         </div>
                     )}
                 </div>
