@@ -21,19 +21,17 @@ const Tasks = (props) => {
 
         <div className={s.tasksWrapper}>
 
-            <div className={s.btnWrapper}>
-                <button className={s.button}>Создать задачу</button>
-            </div>
-
+            {/*<div className={s.btnWrapper}>*/}
+            {/*    <button className={s.button}>Создать задачу</button>*/}
+            {/*</div>*/}
 
             <div className={s.tasks}>
-
                 {/*{props.tasksPage.map(board =>*/}
 
                 <div className={s.board}>
 
                     {/*<div className={s.boardTitle}>{board.name}</div>*/}
-                    <div className={s.boardTitle}>Назначенные мне</div>
+                    <div className={s.boardTitle}> <h2>Мои задачи</h2></div>
 
                     {/*{board.items.map(item =>*/}
                     {tasks.map(item =>

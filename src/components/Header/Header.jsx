@@ -13,12 +13,12 @@ const Header = () => {
                 <ul className={s.headerList}>
                     <li className={s.headerItem}>
                         <div className={s.btnCon}>
-                            <button className={s.btn}> <IoMdNotificationsOutline size={40} color={'#8D23F6'}/> </button>
+                            <button className={s.btn}> <IoMdNotificationsOutline size={42} color={'#8D23F6'}/> </button>
                         </div>
                     </li>
                     <li className={s.headerItem}>
                         <div className={s.btnCon}>
-                            <button className={s.btn}> <CgProfile size={40} color={'#8D23F6'}/> </button>
+                            <button className={s.btn}> <CgProfile size={42} color={'#8D23F6'}/> </button>
                         </div>
                     </li>
                     <li className={s.headerItem}>

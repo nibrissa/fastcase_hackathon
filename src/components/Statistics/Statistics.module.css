@@ -1,0 +1,32 @@
+.wrapper{
+    margin: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+.content{
+    background-color: white;
+    border-radius: 0.8rem;
+    padding: 1rem;
+    overflow-x: auto;
+    font-size: 1.25rem;
+}
+
+.thead th{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0.5rem;
+    text-align: center;
+
+}
+
+.tbody td{
+    border-bottom: 1px solid #EBEBEB;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+@media (max-width: 720px) {
+    .content{
+        font-size: 0.95rem;
+    }
+
+}
