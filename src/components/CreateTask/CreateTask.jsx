@@ -1,6 +1,6 @@
 import s from './CreateTask.module.css'
 import React from 'react';
-import {AiOutlineClose} from "react-icons/all";
+
 
 const CreateTask = () => {
     return(
@@ -19,7 +19,6 @@ const CreateTask = () => {
                             </select>
 
                         <input type="number" placeholder='Очки за выполнение' className={s.Input}/>
-                        <input className={s.File} type="file"/>
 
                         <div className={s.Data}>
                             <div>

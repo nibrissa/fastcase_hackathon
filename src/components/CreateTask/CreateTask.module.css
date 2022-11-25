@@ -46,3 +46,8 @@
 .triggerBtn{
     margin-bottom: 1rem;
 }
+.btnSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
