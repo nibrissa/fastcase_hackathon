@@ -13,6 +13,7 @@ const FriendlistItem = (props) => {
                 <div className={s.info}>
                     <p>{props.user.fio}</p>
                     <p>{props.user.structures_list[0] ? props.user.structures_list[0].name : "Наименование организации"}</p>
+                    <p>{props.user.points}</p>
                 </div>
             </div>
         </div>

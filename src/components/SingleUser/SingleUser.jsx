@@ -60,6 +60,7 @@ const SingleUser = () => {
                             </select>
                         </li>
                         <li className={s.profileInfoItem}>{user.structures_list[0] ? user.structures_list[0].name : "Название организации"}</li>
+                        <li className={s.profileInfoItem}>{user.points}</li>
                     </ul>
                 </div>
             </div>
