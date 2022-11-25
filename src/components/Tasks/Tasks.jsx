@@ -55,9 +55,10 @@ const Tasks = (props) => {
                                     </li>
                                 </ul>*/}
                             </div>
-                            {open && <ViewModal open={open} setOpenM={setOpenM}/>}
+
                         </div>
                     )}
+                    {open && <ViewModal open={open} setOpenM={setOpenM}/>}
                 </div>
                 {/*)}*/}
             </div>
