@@ -27,6 +27,7 @@ const SingleUser = () => {
                             </li>
                             <li className={s.profileInfoItem}>Название Организации</li>
                             <li className={s.profileInfoItem}>Название отдела</li>
+                            <li className={s.profileInfoItem}>Количество баллов</li>
                         </ul>
                 </div>
             </div>

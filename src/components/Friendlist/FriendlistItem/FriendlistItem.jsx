@@ -14,6 +14,7 @@ const FriendlistItem = () => {
                 <div className={s.info}>
                     <p> Иванов Иван Иванович</p>
                     <p>Отдел</p>
+                    <p>Баллы</p>
 
 
                 </div>
