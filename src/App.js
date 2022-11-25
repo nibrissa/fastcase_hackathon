@@ -10,6 +10,7 @@ import SingleTask from "./components/SingleTask/SingleTask";
 import SingleUser from "./components/SingleUser/SingleUser";
 import Friendlist from "./components/Friendlist/Friendlist";
 import Regist from "./components/registration/regist";
+import Header from "./components/Header/Header";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
@@ -20,8 +21,9 @@ function App(props) {
 
             <div className={"app-wrapper"}>
                 <Navbar/>
-                <div className={'app-content'}>
 
+                <div className={'app-content'}>
+                    <Header/>
                     <Routes>
                         <Route path='/login' element={<Login/>}/>
                         <Route path='/registration' element={<Regist/>}/>

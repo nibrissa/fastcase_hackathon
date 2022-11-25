@@ -22,7 +22,7 @@ const Tasks = (props) => {
         <div className={s.tasksWrapper}>
 
             <div className={s.btnWrapper}>
-                <button>Создать задачу</button>
+                <button className={s.button}>Создать задачу</button>
             </div>
 
 

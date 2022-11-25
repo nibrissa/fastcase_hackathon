@@ -1,0 +1,30 @@
+.btn{
+    border: none;
+    background-color: inherit;
+}
+
+.btnCreate{
+    background-color: #8D23F6;
+    border: #8D23F6;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.content{
+    background-color: white;
+    border-radius: 0.8rem 0 0.8rem 0.8rem;
+    width: max-content;
+    padding: 1rem;
+}
+
+.headerList{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
