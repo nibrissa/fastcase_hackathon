@@ -6,6 +6,7 @@ import Statistics from "./components/Statistics/Statistics";
 import {Route, Routes} from 'react-router-dom';
 import Login from "./components/login/login";
 import AuthService from "./services/auth.service";
+import SingleTask from "./components/SingleTask/SingleTask";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
@@ -19,13 +20,15 @@ function App(props) {
                 <div className={'app-content'}>
 
                     <Routes>
-
+                        <Route path='/login' element={<Login/>}/>
                         <Route path='/tasks'
                                element={<Tasks tasksPage={props.state.tasksPage}/>}/>
-
+                        <Route path='/task/:id' element={<SingleTask/>}/>
+                        {/*<Route path='/tasks/search' element={<TaskSearch/>}/>*/}
                         <Route path='/statistics' element={<Statistics/>}/>
-
-                        <Route path='/login' element={<Login/>}/>
+                        {/*<Route path='/my_profile' element={<MyProfile/>}/>*/}
+                        {/*<Route path='/:username/profile' element={<Profile/>}/>*/}
+                        {/*<Route path='/friendlist' element={<Friendlist/>}/>*/}
 
                     </Routes>
 

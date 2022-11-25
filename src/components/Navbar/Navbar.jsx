@@ -1,7 +1,7 @@
 import s from './Navbar.module.css'
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
-import {AiOutlineMenu,AiOutlineClose} from "react-icons/ai"
+import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai"
 
 const Navbar = () => {
 
@@ -20,28 +20,31 @@ const Navbar = () => {
 
                     <NavLink to="/tasks">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/tasks.png')}/>
+                            <img src={require('../../img/tasks.png')} alt='tasks'/>
                             Задачи
                         </div>
                     </NavLink>
 
                     <NavLink to="/statistics">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/stat.png')}/>
+                            <img src={require('../../img/stat.png')} alt='statistics'/>
                             Статистика
                         </div>
                     </NavLink>
 
-                    <div onClick={() => setNav(!nav)} className={s.item}>
-                        <img src={require('../../img/search.png')}/>
-                        <a>Поиск</a>
-                    </div>
+                    <NavLink to="/tasks/search">
+                        <div onClick={() => setNav(!nav)} className={s.item}>
+                            <img src={require('../../img/search.png')} alt='search'/>
+                            Поиск
+                        </div>
+                    </NavLink>
 
-                    <div onClick={() => setNav(!nav)} className={s.item}>
-                        <img src={require('../../img/social.png')}/>
-                        <a>Список друзей</a>
-                    </div>
-
+                    <NavLink to="/friendlist">
+                        <div onClick={() => setNav(!nav)} className={s.item}>
+                            <img src={require('../../img/social.png')} alt='friendlist'/>
+                            Список друзей
+                        </div>
+                    </NavLink>
                 </nav>
 
                 <div onClick={() => setNav(!nav)} className={s.mobileBtn}>
@@ -50,10 +53,7 @@ const Navbar = () => {
 
             </div>
 
-            </div>
-
-
-
+        </div>
 
     );
 
