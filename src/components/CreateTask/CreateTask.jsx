@@ -1,8 +1,11 @@
 import s from './CreateTask.module.css'
 import React from 'react';
+import ViewModal from "../ViewModal/ViewModal";
+import TriggerModal from "../TriggerModal/TriggerModal";
 
 
 const CreateTask = () => {
+    const [open, setOpenM] = React.useState(false);
     return(
 
         <div className={s.wrapper}>
@@ -36,7 +39,8 @@ const CreateTask = () => {
                     </div>
 
                 <div className={s.triggerBtn}>
-                    <button className={s.btnStyle}>Открыть модалку с триггерами</button>
+                    <button className={s.btnStyle} onClick={() => setOpenM(true)}>Открыть модалку с триггерами</button>
+                    {open && <TriggerModal open={open} setOpenM={setOpenM}/>}
                 </div>
 
                 <div className={s.btnSection}>

@@ -1,0 +1,72 @@
+.btn{
+    background-color: #8D23F6;
+    border: #8D23F6;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: all 0.5s ease-in-out;
+}
+
+.modal{
+    background-color: #fff;
+    width: 70%;
+    padding: 2rem;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.closeBtn{
+    float: right;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contentModal{
+    display: flex;
+    flex-direction: column;
+}
+
+.modalInput{
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    background-color: #EBEBEB;
+    border: none;
+    color: black;
+}
+
+.modalSelect{
+    margin: 0.5rem 0;
+    border-radius: 0.3rem;
+    padding: 0.8rem;
+    background-color: #EBEBEB;
+    border: none;
+}
+.modalData{
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.modalFile{
+    margin: 0.5rem 0;
+}
