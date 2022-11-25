@@ -17,7 +17,7 @@ import CreateTask from "./components/CreateTask/CreateTask";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (!user) {
+    if (user) {
 
         return (
 
@@ -28,12 +28,12 @@ function App(props) {
                 <div className={'app-content'}>
                     <Header/>
                     <Routes>
-                        <Route path='/' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
+                        <Route path='/' element={<Tasks/>}/>
                         <Route path='/login' element={<Login/>}/>
-                        <Route path='/update' element={<CreateTask/>}/>
+                        <Route path='/create' element={<CreateTask/>}/>
                         <Route path='/registration' element={<Registration/>}/>
                         <Route path='/logout' element={<Logout/>}/>
-                        <Route path='/tasks' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
+                        <Route path='/tasks' element={<Tasks/>}/>
                         <Route path='/tasks/search' element={<TaskSearch/>}/>
                         <Route path='/statistics' element={<Statistics/>}/>
                         <Route path='/my_profile' element={<SingleUser/>}/>

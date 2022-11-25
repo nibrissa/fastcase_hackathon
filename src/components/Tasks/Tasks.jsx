@@ -13,10 +13,14 @@ function load_tasks() {
 }
 
 
-const Tasks = (props) => {
+const Tasks = () => {
     let {tasks} = load_tasks()
     if (!tasks) {
-        tasks = props.tasksPage[0].items
+        tasks = [
+            {id: 1, name: 'Название задачи 1'},
+            {id: 2, name: 'Название задачи 2'},
+            {id: 3, name: 'Название задачи 3'}
+        ]
     }
     const [open, setOpenM] = React.useState(false);
 
@@ -34,7 +38,7 @@ const Tasks = (props) => {
                 <div className={s.board}>
 
                     {/*<div className={s.boardTitle}>{board.name}</div>*/}
-                    <div className={s.boardTitle}> <h2>Мои задачи</h2></div>
+                    <div className={s.boardTitle}><h2>Мои задачи</h2></div>
 
                     {/*{board.items.map(item =>*/}
                     {tasks.map(item =>

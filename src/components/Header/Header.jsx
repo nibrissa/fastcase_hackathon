@@ -25,7 +25,7 @@ const Header = () => {
                             </div>
                         </li>
                     </NavLink>
-                    <NavLink to={'/update'}>
+                    <NavLink to={'/create'}>
                     <li className={s.headerItem}>
                         <div className={s.btnCon}>
                             <button  className={s.btnCreate}> Создать задачу </button>

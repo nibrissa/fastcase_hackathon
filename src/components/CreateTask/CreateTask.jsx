@@ -38,7 +38,6 @@ const CreateTask = () => {
                 <div className={s.triggerBtn}>
                     <button className={s.btnStyle}>Открыть модалку с триггерами</button>
                 </div>
-                    <textarea placeholder='Добавьте комментарий' className={s.Input}/>
 
                 <div className={s.btnSection}>
                     <button className={s.btnStyle}>Создать</button>
