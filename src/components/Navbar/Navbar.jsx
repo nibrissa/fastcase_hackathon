@@ -63,6 +63,14 @@ const Navbar = () => {
                         </div>
                     </NavLink>
 
+                    <NavLink to="/logout">
+                        <div onClick={() => setNav(!nav)} className={s.item}>
+                            <div className={s.icons}>
+                                <FaUserFriends size={20}/>
+                            </div>
+                            Выйти
+                        </div>
+                    </NavLink>
 
                 </nav>
 

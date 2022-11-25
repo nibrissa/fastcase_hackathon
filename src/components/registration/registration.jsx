@@ -1,7 +1,7 @@
 import s from './regist.module.css';
 import React from 'react';
 
-const Regist = () => {
+const Registration = () => {
     return (
 
         <div className={s.loginCardContainer}>
@@ -41,4 +41,4 @@ const Regist = () => {
     );
 }
 
-export default Regist;
+export default Registration;

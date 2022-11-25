@@ -1,6 +1,7 @@
 import s from './login.module.css';
 import React from 'react';
 import AuthService from "../../services/auth.service";
+import {NavLink} from "react-router-dom";
 
 function handleLogin(e) {
     e.preventDefault()
@@ -36,6 +37,9 @@ const Login = () => {
                     </div>
 
                     <button className={s.btn} type="submit">Войти</button>
+                    <NavLink to={"/registration"}>
+                        <a>Зарегистрироваться</a>
+                    </NavLink>
 
                 </form>
             </div>

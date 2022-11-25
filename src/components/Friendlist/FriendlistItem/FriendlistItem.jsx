@@ -2,20 +2,17 @@ import React from 'react'
 import s from './FriendlistItem.module.css'
 
 
-const FriendlistItem = () => {
+const FriendlistItem = (props) => {
 
-    return(
+    return (
 
         <div className={s.itemWrapper}>
             <div className={s.itemContent}>
                 <div className={s.ava}>
-
                 </div>
                 <div className={s.info}>
-                    <p> Иванов Иван Иванович</p>
-                    <p>Отдел</p>
-
-
+                    <p>{props.user.fio}</p>
+                    <p>{props.user.structures_list[0] ? props.user.structures_list[0].name : "Наименование организации"}</p>
                 </div>
             </div>
         </div>

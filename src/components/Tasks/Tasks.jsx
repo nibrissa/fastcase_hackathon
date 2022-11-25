@@ -1,6 +1,5 @@
 import s from './Tasks.module.css';
 import React from 'react';
-import {NavLink} from "react-router-dom";
 import axios from "axios";
 import {API_URL} from "../../services/user.service";
 import authHeader from "../../services/auth-header";
@@ -39,7 +38,7 @@ const Tasks = (props) => {
 
                     {/*{board.items.map(item =>*/}
                     {tasks.map(item =>
-                        <div className={s.item} onClick={() => setOpenM(true)}>
+                        <div className={s.item} key={item.id} onClick={() => setOpenM(true)}>
                             <div className={s.itemDesc}>{item.id}</div>
                             <div className={s.itemDesc}>{item.name}</div>
                             <div className={s.itemBtn}>
@@ -55,12 +54,13 @@ const Tasks = (props) => {
                                     </li>
                                 </ul>*/}
                             </div>
-                            {open && <ViewModal open={open} setOpenM={setOpenM}/>}
+
                         </div>
                     )}
                 </div>
                 {/*)}*/}
             </div>
+            {open && <ViewModal open={open} setOpenM={setOpenM}/>}
         </div>
     );
 }

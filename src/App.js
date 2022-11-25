@@ -6,17 +6,18 @@ import Statistics from "./components/Statistics/Statistics";
 import {Route, Routes} from 'react-router-dom';
 import Login from "./components/login/login";
 import AuthService from "./services/auth.service";
-import SingleTask from "./components/SingleTask/SingleTask";
 import SingleUser from "./components/SingleUser/SingleUser";
 import Friendlist from "./components/Friendlist/Friendlist";
-import Regist from "./components/registration/regist";
+import Registration from "./components/registration/registration";
 import Header from "./components/Header/Header";
 import CreateModal from "./components/CreateModal/CreateModal";
 import TaskSearch from "./components/TaskSearch/TaskSearch";
+import Logout from "./components/logout/Logout";
+
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (!user) {
+    if (user) {
 
         return (
 
@@ -27,11 +28,11 @@ function App(props) {
                 <div className={'app-content'}>
                     <Header/>
                     <Routes>
+                        <Route path='/' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
                         <Route path='/login' element={<Login/>}/>
-                        <Route path='/registration' element={<Regist/>}/>
-                        <Route path='/tasks'
-                               element={<Tasks tasksPage={props.state.tasksPage}/>}/>
-                        <Route path='/task/:id' element={<SingleTask/>}/>
+                        <Route path='/registration' element={<Registration/>}/>
+                        <Route path='/logout' element={<Logout/>}/>
+                        <Route path='/tasks' element={<Tasks tasksPage={props.state.tasksPage}/>}/>
                         <Route path='/tasks/search' element={<TaskSearch/>}/>
                         <Route path='/statistics' element={<Statistics/>}/>
                         <Route path='/my_profile' element={<SingleUser/>}/>
@@ -44,8 +45,6 @@ function App(props) {
                 </div>
 
             </div>
-
-
         );
     } else {
         return (
