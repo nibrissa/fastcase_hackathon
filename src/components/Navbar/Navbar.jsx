@@ -2,7 +2,7 @@ import s from './Navbar.module.css'
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai"
-import {BsSearch, CgProfile, FaTasks, FaUserFriends, TfiStatsUp} from "react-icons/all";
+import {BsSearch, CgProfile, FaTasks, FaUserFriends, GrClose, TfiStatsUp} from "react-icons/all";
 
 const Navbar = () => {
 

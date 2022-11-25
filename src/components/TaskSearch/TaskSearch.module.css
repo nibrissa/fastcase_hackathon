@@ -1,0 +1,41 @@
+.wrapper{
+    margin: 1rem 2rem;
+}
+
+.content{
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.accordion{
+    background-color: #EBEBEB;
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.8em;
+}
+
+.inputSearch{
+    margin: 1rem 0;
+    padding: 1rem;
+    border-radius: 0.8em;
+
+}
+
+.accordionTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.accordionContent{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.acItem{
+    margin-bottom: 1rem;
+}

@@ -8,7 +8,7 @@
     padding: 1rem;
     display: grid;
     grid-template-areas: "ava info";
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
     width: auto;
 }
 .profileAva{
@@ -17,6 +17,7 @@
     width: 10em;
     height: 10em;
     grid-area: ava;
+
 }
 
 .profileInfo{
@@ -30,7 +31,7 @@
     padding: 1rem;
 }
 
-select{
+.select{
     width: 100%;
     border: none;
     padding: 0.2rem;

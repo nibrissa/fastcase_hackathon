@@ -2,9 +2,12 @@ import React from 'react'
 import s from './Header.module.css'
 import {IoMdNotificationsOutline} from 'react-icons/io'
 import {CgProfile} from "react-icons/all";
+import CreateModal from "../CreateModal/CreateModal";
 
 
 const Header = () => {
+
+    const [open, setOpen] = React.useState(false);
 
     return(
 
@@ -23,7 +26,8 @@ const Header = () => {
                     </li>
                     <li className={s.headerItem}>
                         <div className={s.btnCon}>
-                            <button className={s.btnCreate}> Создать задачу </button>
+                            <button onClick={() => setOpen(true)} className={s.btnCreate}> Создать задачу </button>
+                            {open && <CreateModal open={open} setOpen={setOpen}/>}
                         </div>
                     </li>
                 </ul>

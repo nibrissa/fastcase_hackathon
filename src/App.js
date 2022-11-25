@@ -11,6 +11,8 @@ import SingleUser from "./components/SingleUser/SingleUser";
 import Friendlist from "./components/Friendlist/Friendlist";
 import Regist from "./components/registration/regist";
 import Header from "./components/Header/Header";
+import CreateModal from "./components/CreateModal/CreateModal";
+import TaskSearch from "./components/TaskSearch/TaskSearch";
 
 function App(props) {
     const user = AuthService.getCurrentUser();
@@ -30,11 +32,12 @@ function App(props) {
                         <Route path='/tasks'
                                element={<Tasks tasksPage={props.state.tasksPage}/>}/>
                         <Route path='/task/:id' element={<SingleTask/>}/>
-                        {/*<Route path='/tasks/search' element={<TaskSearch/>}/>*/}
+                        <Route path='/tasks/search' element={<TaskSearch/>}/>
                         <Route path='/statistics' element={<Statistics/>}/>
                         <Route path='/my_profile' element={<SingleUser/>}/>
                         {/*<Route path='/:username/profile' element={<Profile/>}/>*/}
                         <Route path='/friendlist' element={<Friendlist/>}/>
+                        {/*<Route path='/modal' element={<CreateModal/>}/>*/}
 
                     </Routes>
 

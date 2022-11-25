@@ -17,7 +17,7 @@ const SingleUser = () => {
                             <li className={s.profileInfoItem}>почта</li>
                             <li className={s.profileInfoItem}>телефон</li>
                             <li className={s.profileInfoItem}>
-                                <select>
+                                <select className={s.select}>
                                     <option disabled selected>Предпочитаемый способ связи:</option>
                                     <option>Почта</option>
                                     <option>Телефон</option>
