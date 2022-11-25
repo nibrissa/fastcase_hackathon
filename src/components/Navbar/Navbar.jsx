@@ -2,6 +2,7 @@ import s from './Navbar.module.css'
 import React, {useState} from 'react';
 import {NavLink} from "react-router-dom";
 import {AiOutlineMenu, AiOutlineClose} from "react-icons/ai"
+import {BsSearch, CgProfile, FaTasks, FaUserFriends, TfiStatsUp} from "react-icons/all";
 
 const Navbar = () => {
 
@@ -19,35 +20,45 @@ const Navbar = () => {
                 <nav className={nav ? [s.nav, s.active].join(' ') : [s.nav]}>
                     <NavLink to="/my_profile">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/social.png')} alt='friendlist'/>
+                            <div className={s.icons}>
+                                <CgProfile size={20}/>
+                            </div>
                             Профиль
                         </div>
                     </NavLink>
 
                     <NavLink to="/tasks">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/tasks.png')} alt='tasks'/>
+                            <div className={s.icons}>
+                                <FaTasks size={20}/>
+                            </div>
                             Задачи
                         </div>
                     </NavLink>
 
                     <NavLink to="/statistics">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/stat.png')} alt='statistics'/>
+                            <div className={s.icons}>
+                                <TfiStatsUp size={20}/>
+                            </div>
                             Статистика
                         </div>
                     </NavLink>
 
                     <NavLink to="/tasks/search">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/search.png')} alt='search'/>
+                            <div className={s.icons}>
+                                <BsSearch size={20}/>
+                            </div>
                             Поиск
                         </div>
                     </NavLink>
 
                     <NavLink to="/friendlist">
                         <div onClick={() => setNav(!nav)} className={s.item}>
-                            <img src={require('../../img/social.png')} alt='friendlist'/>
+                            <div className={s.icons}>
+                                <FaUserFriends size={20}/>
+                            </div>
                             Список друзей
                         </div>
                     </NavLink>
