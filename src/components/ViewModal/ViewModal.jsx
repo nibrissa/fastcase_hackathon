@@ -2,10 +2,10 @@ import React from 'react'
 import s from './ViewModal.module.css'
 import {AiOutlineClose} from "react-icons/all";
 
-const ViewModal = ({open, setOpenM}) => {
+const ViewModal = ({open, setOpenM, task}) => {
 
 
-    return(
+    return (
         <div className={"wrapper"}>
 
             {
@@ -14,28 +14,25 @@ const ViewModal = ({open, setOpenM}) => {
                         <div className={s.modal}>
                             <div className={s.header}>
                                 <span className={s.title}>Просмотр задачи</span>
-                                <AiOutlineClose onClick={() => setOpenM(false)} size={25} color={'#8D23F6'} className={s.closeBtn}/>
+                                <AiOutlineClose onClick={() => setOpenM(false)} size={25} color={'#8D23F6'}
+                                                className={s.closeBtn}/>
                             </div>
                             <div className={s.contentModal}>
 
-                                <p className={s.modalInput}>Заголовок</p>
-                                <p className={s.modalInput}>Тип напоминания:</p>
-                                <p className={s.modalInput}>Способ оповещания:</p>
-                                <p className={s.modalInput}>Очки за выполнение</p>
-                                <div className={s.modalData}>
-                                    <div>
-                                        <span>Начало:</span>
-                                        <input type="date" className={s.inputModal}/>
-                                    </div>
-                                    <div>
-                                        <span>Конец:</span>
-                                        <input type="date" className={s.inputModal}/>
-                                    </div>
-
-                                </div>
-                                <p className={s.modalInput}>Описание задачи</p>
-
-
+                                <p className={s.modalInput}>{task.name}</p>
+                                {/*<p className={s.modalInput}>Тип напоминания:</p>*/}
+                                <p className={s.modalInput}>{task.points}</p>
+                                {/*<div className={s.modalData}>*/}
+                                {/*    <div>*/}
+                                {/*        <span>Начало:</span>*/}
+                                {/*        <input type="date" className={s.inputModal}/>*/}
+                                {/*    </div>*/}
+                                {/*    <div>*/}
+                                {/*        <span>Конец:</span>*/}
+                                {/*        <input type="date" className={s.inputModal}/>*/}
+                                {/*    </div>*/}
+                                {/*</div>*/}
+                                <p className={s.modalInput}>{task.description}</p>
 
                             </div>
                         </div>

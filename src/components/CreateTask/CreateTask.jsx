@@ -7,38 +7,30 @@ import AuthService from "../../services/auth.service";
 import ViewModal from "../ViewModal/ViewModal";
 import TriggerModal from "../TriggerModal/TriggerModal";
 
+const task = {
+    name: "",
+    description: "",
+    media_contents: "",
+    assignee_ids: [],
+    points: 0,
+    est_time: "",
+    subscribed_ids: [
+        AuthService.getCurrentUser() ? AuthService.getCurrentUser().id : 0
+    ],
+    triggers: []
+};
 
 const CreateTask = () => {
     const [open, setOpenM] = React.useState(false);
 
-    let task = {
-        name: "",
-        description: "",
-        media_contents: "",
-        assignee_ids: [],
-        points: 0,
-        est_time: "",
-        subscribed_ids: [
-            // AuthService.getCurrentUser().id
-            1
-        ],
-        triggers: [
-            {
-                trigger_type: "",
-                needed_action: "",
-                parent_task_id: 0,
-                // author_id: AuthService.getCurrentUser().id,
-                author_id: 1,
-                timer: ""
-            }
-        ]
-    };
 
+    const add_trigger = (child_trigger) => {
+        task.triggers = [...task.triggers, child_trigger]
+    }
 
 
     function create_task() {
-        console.log(task)
-        // return axios.post(API_URL + 'create/task', task, {headers: authHeader()});
+        return axios.post(API_URL + 'create/task', task, {headers: authHeader()}).then(res => window.location = '/')
     }
 
     return (
@@ -67,12 +59,16 @@ const CreateTask = () => {
 
                 <div className={s.triggerBtn}>
                     <button className={s.btnStyle} onClick={() => setOpenM(true)}>Открыть модалку с триггерами</button>
-                    {open && <TriggerModal open={open} setOpenM={setOpenM}/>}
+                    {open && <TriggerModal open={open} setOpenM={setOpenM} add_parent_trigger={add_trigger}/>}
+                </div>
+                <div>
+                    {task.triggers.map(trigger => <p>Trigger {trigger.trigger_type}</p>)}
                 </div>
 
                 <div className={s.btnSection}>
                     <button className={s.btnStyle} onClick={create_task}>Создать</button>
                 </div>
+
             </div>
         </div>
 

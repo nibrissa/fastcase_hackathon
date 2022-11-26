@@ -7,7 +7,6 @@ function handleLogin(e) {
     e.preventDefault()
     let username = document.getElementsByName('username')[0].value
     let password = document.getElementsByName('password')[0].value
-    console.log(username)
     AuthService.login(username, password).then(
         () => {
             window.location = '/';
@@ -37,9 +36,9 @@ const Login = () => {
                     </div>
 
                     <button className={s.btn} type="submit">Войти</button>
-                    <NavLink to={"/registration"}>
-                        <a>Зарегистрироваться</a>
-                    </NavLink>
+                    {/*<NavLink to={"/registration"}>*/}
+                    {/*    <a>Зарегистрироваться</a>*/}
+                    {/*</NavLink>*/}
 
                 </form>
             </div>

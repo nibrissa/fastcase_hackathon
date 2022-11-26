@@ -69,9 +69,9 @@ function App(props) {
         connect();
     }
 
-    registerUser();
 
     if (user) {
+        registerUser();
         return (
 
 
