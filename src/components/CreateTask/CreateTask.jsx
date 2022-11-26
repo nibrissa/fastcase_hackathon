@@ -19,14 +19,16 @@ const CreateTask = () => {
         points: 0,
         est_time: "",
         subscribed_ids: [
-            AuthService.getCurrentUser().id
+            // AuthService.getCurrentUser().id
+            1
         ],
         triggers: [
             {
                 trigger_type: "",
                 needed_action: "",
                 parent_task_id: 0,
-                author_id: AuthService.getCurrentUser().id,
+                // author_id: AuthService.getCurrentUser().id,
+                author_id: 1,
                 timer: ""
             }
         ]

@@ -22,11 +22,11 @@ const TriggerModal = ({open, setOpenM}) => {
 
                             <Tabs>
                                 <TabList className={s.tabList}>
-                                    <Tab>По времени</Tab>
-                                    <Tab>По другой задаче</Tab>
+                                    <Tab className={s.tabListItem}>По времени</Tab>
+                                    <Tab className={s.tabListItem}>По другой задаче</Tab>
                                 </TabList>
                                 <TabPanel>
-                                    <select>
+                                    <select className={s.Input}>
                                         <option disabled selected> Выберите частоту уведомлений:</option>
                                         <option>Раз в час</option>
                                         <option>Раз в сутки</option>
@@ -35,9 +35,12 @@ const TriggerModal = ({open, setOpenM}) => {
 
                                 </TabPanel>
                                 <TabPanel>
-                                    <span>Задача</span>
-                                    <input type='text'/>
-                                    <select>
+                                    <div>
+                                        <span>Задача</span>
+                                        <input type='text' className={s.Input}/>
+                                    </div>
+
+                                    <select className={s.Input}>
                                         <option disabled selected> Действие</option>
                                         <option>Открыта</option>
                                         <option>Закрыта</option>
@@ -45,10 +48,10 @@ const TriggerModal = ({open, setOpenM}) => {
                                     </select>
                                 </TabPanel>
 
+                                <button className={s.btn}>Подтвердить</button>
+
 
                             </Tabs>
-
-
 
                             </div>
                         </div>
