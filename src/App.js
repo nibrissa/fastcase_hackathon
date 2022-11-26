@@ -13,12 +13,65 @@ import Header from "./components/Header/Header";
 import TaskSearch from "./components/TaskSearch/TaskSearch";
 import Logout from "./components/logout/Logout";
 import CreateTask from "./components/CreateTask/CreateTask";
+import SockJS from "sockjs-client";
+import {over} from "stompjs";
 
 
 function App(props) {
     const user = AuthService.getCurrentUser();
-    if (!user) {
+    let stompClient = null;
 
+    const connect = () => {
+        let Sock = new SockJS('http://localhost:8081/ws');
+        stompClient = over(Sock);
+        stompClient.connect({}, onConnected, onError);
+    }
+
+    const onConnected = () => {
+        stompClient.subscribe('/stream_all', onMessageReceived);
+        stompClient.subscribe('/user/' + AuthService.getCurrentUser().username + '/direct_trigger', onPersonalNotificationReceived);
+        userJoin()
+    }
+
+    const userJoin = () => {
+        let chatMessage = {
+            content: "JOIN"
+        };
+        stompClient.send("/stream_all", {}, JSON.stringify(chatMessage));
+    }
+
+    const onMessageReceived = (payload) => {
+        console.log(payload);
+        var payloadData = JSON.parse(payload.body);
+        // switch (payloadData.status) {
+        //     case "JOIN":
+        //         if (!privateChats.get(payloadData.senderName)) {
+        //             privateChats.set(payloadData.senderName, []);
+        //             setPrivateChats(new Map(privateChats));
+        //         }
+        //         break;
+        //     case "MESSAGE":
+        //         publicChats.push(payloadData);
+        //         setPublicChats([...publicChats]);
+        //         break;
+        // }
+    }
+
+    const onPersonalNotificationReceived = (payload) => {
+        console.log(payload);
+    }
+
+    const onError = (err) => {
+        console.log(err);
+    }
+
+    const registerUser = () => {
+        connect();
+    }
+
+    registerUser();
+
+    if (user) {
         return (
 
 
