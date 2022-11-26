@@ -1,10 +1,12 @@
 .btn{
     background-color: #8D23F6;
     border: #8D23F6;
-    padding: 1rem;
-    font-size: 1rem;
+    padding: 0.5rem;
     color: white;
     border-radius: 0.5rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    width: 100%;
 }
 
 .overlay{
@@ -19,7 +21,7 @@
 
 .modal{
     background-color: #fff;
-    width: 70%;
+    width: 40%;
     padding: 2rem;
     border-radius: 10px;
     position: absolute;
@@ -38,13 +40,31 @@
     font-weight: bold;
     font-size: 1.1rem;
 }
-
+.header{
+    margin-bottom: 1rem;
+}
 .contentModal{
     display: flex;
     flex-direction: column;
 }
 
-.tabList{
-    display: flex;
-    justify-content: space-between;
+
+
+.tabListItem{
+    cursor: pointer;
+    background-color: #8D23F6;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    margin-bottom: 1rem;
 }
+
+.Input{
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem;
+    background-color: #EBEBEB;
+    width: 100%;
+}
+
